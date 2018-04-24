@@ -28,13 +28,46 @@ Le projet du jour consiste à introduire Rails par la notion de modèles, associ
 
 ## Fonctionnement des exercices :
 
-### Fonctionnement de l'exercice 1:
+### Exercice 1:
 
-### Fonctionnement de l'exercice 2:
+Cet exercice était le tour de chauffe de la découverte des bases de données et de RoR. Si le cours qui est maintenant présent sur la plateforme avait été présent ce matin, beaucoup moins de sueur aurait été versée ... :D.
 
-### Fonctionnement de l'exercice 3:
+Le but est de créer plusieurs classes, et laisions telles que :
 
-Cet exercice est décomposé en 4 parties. Le but est de créer 4formats de base de données qui permettent le traitement de ces dernières selon des modes définis. Voici les fonctionnements décrits :
+  - Class User | name
+  - Class Post | title, body, description, user_id, category_id
+  - Class Category | name
+
+Le principe est qu'un "User" peut créer un "Post", qui est tagué par des éléments "Category". Plusieurs "categories" peuvent être recensées dans un "post". Plusieurs "posts" peuvent être rédigés par un "user".
+
+Le but ici est d'utiliser les commandes suivantes :
+
+Création d'une nouvelle classe :
+```
+  $ rails g model Class att:type
+```
+
+Création d'une nouvelle liaison :
+```
+  $ rails g migration add_first_to_secondS first:references
+```
+
+Ne pas oublier de placer dans les fichiers .rb issus de /app :
+```
+  has_one :att //    has_many :att      // belongs_to :att
+                            VS
+  1 dependance // plusieurs dépendances // dépendant de
+```
+
+Et avec ça, la PLS se fait en douceur ...
+
+### Exercice 2:
+
+Seed biche ! Bab ?
+
+### Exercice 3:
+
+Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bases de données qui permettent le traitement de ces dernières selon des modes définis. Voici les fonctionnements décrits :
 
   * MOOCademy : Il est demandé que deux classes puissent gérer des Cours et des Leçons. Pour chaque cours, des leçons sont rattachées. La structure est donc telle que :
     - Class Course | name, description
@@ -55,26 +88,7 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4formats de base
     - Class Lesson | name, course_id
     - Class Course | title, description, content
 
-PS : Les colonnes id/created_at/updated_at créés automatiquement par Rails ont été volontairement omis.
-
-PS2 : Rappels ...
-
-Création d'une nouvelle classe :
-```
-  $ rails g model Class att:type
-```
-
-Création d'une nouvelle liaison :
-```
-  $ rails g migration add_first_to_secondS first:references
-```
-
-Ne pas oublier de placer dans les fichiers .rb issus de /app :
-```
-  has_one :att //    has_many :att      // belongs_to :att
-                            VS
-  1 dependance // plusieurs dépendances // dépendant de
-```
+*PS : Les colonnes id/created_at/updated_at créés automatiquement par Rails ont été volontairement omis.*
 
 ## Conditions de test des exercices pour les corrections
 
@@ -82,7 +96,15 @@ Ne pas oublier de placer dans les fichiers .rb issus de /app :
 
 ### Exercice 1 :
 
+```
+  $
+```
+
 ### Exercice 2 :
+
+```
+  $ Seed biche ! Bab ?
+```
 
 ### Exercice 3 :
 
