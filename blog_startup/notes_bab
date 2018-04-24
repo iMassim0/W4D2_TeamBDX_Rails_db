@@ -1,3 +1,0 @@
-def Post_tags(Post_id)
-  Post.find(Post_id).category_ids.map { |id| Category.find(id).name }
-end
