@@ -63,7 +63,11 @@ Et avec ça, la PLS se fait en douceur ...
 
 ### Exercice 2:
 
-Seed biche ! Bab ?
+Le but de l'exercice ici est d'utiliser la commande suivante :
+```
+  $ rails db:seed
+```
+Celle-ci permet de pouvoir executer les actions renseignées dans le fichier seeds.rb, à l'intérieur du dossier db. Elle permet, une fois renseignée par les lignes de commande nécessaires de pouvoir importer les données souhaités dans la base de données locale. En l'occurrence, la base de donnée utilisée ici est une base spécialement dédiée aux tests, issue de la gem 'Faker' (sus nommée Fakir svp). Voir la documentation pour plus d'infos sur la gem, mais notamment, nous avons accès à des bases de données de races de chats, de noms de personnages de GOT ou encore une simple incrémentation de nombres (très utile, sisi).
 
 ### Exercice 3:
 
@@ -94,16 +98,26 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
 
 **Pour faciliter la correction des exercices précédents voici les éléments à tester dans la console rails, si vous le souhaitez. Le but est de créer des instances de classes, et des liaisons entre celles-ci pour observer le bon fonctionnement des programmes. Les commandes peuvent être :**
 
+**NOTA : $ = terminal || > = console rails**
+
 ### Exercice 1 :
 
 ```
-  $
+  >
 ```
 
 ### Exercice 2 :
 
 ```
-  $ Seed biche ! Bab ?
+  $ rails db:seed
+
+  $ rails c
+
+  > User.find(13)
+
+  > User.find(33).name
+
+  > Post.find(40).categories
 ```
 
 ### Exercice 3 :
@@ -111,11 +125,11 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
   * Exemple pour le MOOCademy :
 
 ```
-  $ course = Course.create(title: 'RoR', description: 'Ruby On Rails')
+  > course = Course.create(title: 'RoR', description: 'Ruby On Rails')
 
-  $ lesson_1 = Lesson.create(title: 'Rails', body: 'content', course_id: '1')
+  > lesson_1 = Lesson.create(title: 'Rails', body: 'content', course_id: '1')
 
-  $ lesson_2 = Lesson.create(title: 'PLS', body: 'content', course_id: '1')
+  > lesson_2 = Lesson.create(title: 'PLS', body: 'content', course_id: '1')
 ```
 
 Ce concept est utilisé pour le MOOCademy, mais reste le même pour tous les autres exercices. Chaque nouvelle instance de classe devra remplir toutes les informations nécessaires.
@@ -123,13 +137,13 @@ Ce concept est utilisé pour le MOOCademy, mais reste le même pour tous les aut
   * Exemple pour le theHackingNews :
 
 ```
-  $ user_1 = User.create(name: 'maurice')
+  > user_1 = User.create(name: 'maurice')
 
-  $ post_1 = Post.create(url: '/lib/', content: 'Comment en chier avec RoR/DB quand on a le cours à 23h ...', user_id: '1')
+  > post_1 = Post.create(url: '/lib/', content: 'Comment en chier avec RoR/DB quand on a le cours à 23h ...', user_id: '1')
 
-  $ comment_1 = Comment.create(content: 'Argh en fait c était pas si dur ...', user_id: '1', post_id: '1')
+  > comment_1 = Comment.create(content: 'Argh en fait c était pas si dur ...', user_id: '1', post_id: '1')
 
-  $ comment_to_c_1 = Comment_to_c.create(content: 'Allo', user_id: '1', comment_id: '1')
+  > comment_to_c_1 = Comment_to_c.create(content: 'Allo', user_id: '1', comment_id: '1')
 ```
 
 ## Contributeurs
