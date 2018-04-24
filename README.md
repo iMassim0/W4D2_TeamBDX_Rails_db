@@ -28,7 +28,7 @@ Le projet du jour consiste à introduire Rails par la notion de modèles, associ
 
 ## Fonctionnement des exercices :
 
-### Exercice 1:
+### Blog_startup / db & app :
 
 Cet exercice était le tour de chauffe de la découverte des bases de données et de RoR. Si le cours qui est maintenant présent sur la plateforme avait été présent ce matin, beaucoup moins de sueur aurait été versée ... :D.
 
@@ -61,7 +61,7 @@ Ne pas oublier de placer dans les fichiers .rb issus de /app :
 
 Et avec ça, la PLS se fait en douceur ...
 
-### Exercice 2:
+### Blog_startup / seed :
 
 Le but de l'exercice ici est d'utiliser la commande suivante :
 ```
@@ -100,7 +100,7 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
 
 **NOTA : $ = terminal || > = console rails**
 
-### Exercice 1 :
+### Blog_startup / db & app :
 
 ```
   > user_1 = User.creat(name: 'Monique')
@@ -112,7 +112,7 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
   > category_2 = Category.new(name: 'Development', post_id: '1')
 ```
 
-### Exercice 2 :
+### Blog_startup / seed :
 
 ```
   $ rails db:seed
