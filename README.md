@@ -28,7 +28,7 @@ Le projet du jour consiste à introduire Rails par la notion de modèles, associ
 
 ## Fonctionnement des exercices :
 
-### Blog_startup / db & app :
+### Exercice 1.1 - Blog_startup / db & app :
 
 Cet exercice était le tour de chauffe de la découverte des bases de données et de RoR. Si le cours qui est maintenant présent sur la plateforme avait été présent ce matin, beaucoup moins de sueur aurait été versée ... :D.
 
@@ -61,7 +61,7 @@ Ne pas oublier de placer dans les fichiers .rb issus de /app :
 
 Et avec ça, la PLS se fait en douceur ...
 
-### Blog_startup / seed :
+### Exercice 1.2 - Blog_startup / seed :
 
 Le but de l'exercice ici est d'utiliser la commande suivante :
 ```
@@ -69,7 +69,7 @@ Le but de l'exercice ici est d'utiliser la commande suivante :
 ```
 Celle-ci permet de pouvoir executer les actions renseignées dans le fichier seeds.rb, à l'intérieur du dossier db. Elle permet, une fois renseignée par les lignes de commande nécessaires de pouvoir importer les données souhaités dans la base de données locale. En l'occurrence, la base de donnée utilisée ici est une base spécialement dédiée aux tests, issue de la gem 'Faker' (sus nommée Fakir svp). Voir la documentation pour plus d'infos sur la gem, mais notamment, nous avons accès à des bases de données de races de chats, de noms de personnages de GOT ou encore une simple incrémentation de nombres (très utile, sisi).
 
-### Exercice 3:
+### Exercices 3:
 
 Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bases de données qui permettent le traitement de ces dernières selon des modes définis. Voici les fonctionnements décrits :
 
@@ -100,7 +100,7 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
 
 **NOTA : $ = terminal || > = console rails**
 
-### Blog_startup / db & app :
+### Exercice 1.1 - Blog_startup / db & app :
 
 ```
   > user_1 = User.creat(name: 'Monique')
@@ -112,7 +112,7 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
   > category_2 = Category.new(name: 'Development', post_id: '1')
 ```
 
-### Blog_startup / seed :
+### Exercice 1.2 - Blog_startup / seed :
 
 ```
   $ rails db:seed
@@ -126,7 +126,7 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
   > Post.find(40).categories
 ```
 
-### Exercice 3 :
+### Exercices 3 :
 
   * Exemple pour le MOOCademy :
 
