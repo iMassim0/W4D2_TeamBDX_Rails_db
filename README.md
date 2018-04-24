@@ -14,10 +14,10 @@ Le projet du jour consiste à introduire Rails par la notion de modèles, associ
   $ git clone https://github.com/iMassim0/W4D2_TeamBDX_Rails_db
 ```
 
-3 - Se rendre dans le dossier souhaité, et ne pas oublier d'effectuer la commande suivante au cas ou :
+3 - Se rendre dans le dossier souhaité, et effectuer ces 2 commandes suivantes pour initialiser le fonctionnement :
 
 ```
-  $ bundle install
+  $ bundle install && rails db:migrate
 ```
 
 4 - Pour chaque correction, il sera nécessaire de lancer la commande rails pour rentrer des lignes de commandes, telle que :
@@ -51,18 +51,34 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4formats de base
     - Class Comment | content, user_id, post_id
     - Class Comment_to_c | content, user_id, comment_id
 
-  * The Hacking Class : Il est demandé de créer un site d'éducation qui recense des éleves, et qui hébèrgent des cours. Les élèves ne peuvent s'inscrire qu'a un seul cours. La structure est donc telle que :
-    - Class User | name, course_id
+  * The Hacking Class : Il est demandé de créer un site d'éducation qui recense des leçons, et qui hébèrgent des cours. Les élèves ne peuvent s'inscrire qu'a un seul cours. La structure est donc telle que :
+    - Class Lesson | name, course_id
     - Class Course | title, description, content
 
-  PS : Les colonnes id/created_at/updated_at créés automatiquement par Rails ont été volontairement omis.
+PS : Les colonnes id/created_at/updated_at créés automatiquement par Rails ont été volontairement omis.
 
-  PS2 : Les classes ont été créées avec la commande suivante :
+PS2 : Rappels ...
 
+Création d'une nouvelle classe :
+```
+  $ rails g model Class att:type
+```
+
+Création d'une nouvelle liaison :
+```
+  $ rails g migration add_first_to_secondS first:references
+```
+
+Ne pas oublier de placer dans les fichiers .rb issus de /app :
+```
+  has_one :att //    has_many :att      // belongs_to :att
+                            VS
+  1 dependance // plusieurs dépendances // dépendant de
+```
 
 ## Conditions de test des exercices pour les corrections
 
-**Pour faciliter la correction des exercices précédents voici les éléments à tester dans la console rails, si vous le souhaitez. Le but est de créer des instances de classes, et des liaisons entre celles-ci pour observer le bon fonctionnement des programmes. Les commandes sont respectivement :**
+**Pour faciliter la correction des exercices précédents voici les éléments à tester dans la console rails, si vous le souhaitez. Le but est de créer des instances de classes, et des liaisons entre celles-ci pour observer le bon fonctionnement des programmes. Les commandes peuvent être :**
 
 ### Exercice 1 :
 
@@ -70,7 +86,29 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4formats de base
 
 ### Exercice 3 :
 
+  * Exemple pour le MOOCademy :
 
+```
+  $ course = Course.create(title: 'RoR', description: 'Ruby On Rails')
+
+  $ lesson_1 = Lesson.create(title: 'Rails', body: 'content', course_id: '1')
+
+  $ lesson_2 = Lesson.create(title: 'PLS', body: 'content', course_id: '1')
+```
+
+Ce concept est utilisé pour le MOOCademy, mais reste le même pour tous les autres exercices. Chaque nouvelle instance de classe devra remplir toutes les informations nécessaires.
+
+  * Exemple pour le theHackingNews :
+
+```
+  $ user_1 = User.create(name: 'maurice')
+
+  $ post_1 = Post.create(url: '/lib/', content: 'Comment en chier avec RoR/DB quand on a le cours à 23h ...', user_id: '1')
+
+  $ comment_1 = Comment.create(content: 'Argh en fait c était pas si dur ...', user_id: '1', post_id: '1')
+
+  $ comment_to_c_1 = Comment_to_c.create(content: 'Allo', user_id: '1', comment_id: '1')
+```
 
 ## Contributeurs
 
