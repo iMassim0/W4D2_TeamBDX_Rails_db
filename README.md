@@ -82,13 +82,13 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
     - Class Pin | url, user_id
     - Class Post | content, user_id, pin_id
 
-  * The Hacking News : Il est demandé que des utilisateurs puissent poster des liens. Ces derniers doivent pouvoir également commenter ces liens, mais également commenter les commentaires. La structure est donc telle que :
+  * The Hacking News : Il est demandé que des utilisateurs puissent poster des liens. Ces derniers doivent pouvoir également commenter ces liens. Egalement commenter les commentaires. La structure est donc telle que :
     - Class User | name
     - Class Post | url, content, user_id
     - Class Comment | content, user_id, post_id
     - Class Comment_to_c | content, user_id, comment_id
 
-  * The Hacking Class : Il est demandé de créer un site d'éducation qui recense des leçons, et qui hébèrgent des cours. Les élèves ne peuvent s'inscrire qu'a un seul cours. La structure est donc telle que :
+  * The Hacking Class : Il est demandé de créer un site d'éducation qui recense des leçons, et qui hébèrgent des cours. Les élèves ne peuvent s'inscrire que sur un seul cours. La structure est donc telle que :
     - Class Lesson | name, course_id
     - Class Course | title, description, content
 
@@ -161,3 +161,14 @@ Ce concept est utilisé pour le MOOCademy, mais reste le même pour tous les aut
 <p align="center">
   <img src="THP_BDX.png"/>
 </p>
+
+## Pour aller plus loin
+
+### Au début, t'es comme ca :
+https://www.youtube.com/watch?v=MmfeL0R5rbY
+
+### A 18h, tu te dis ca :
+https://www.youtube.com/watch?v=xh1svvoBmCs
+
+### A 23h52 :
+https://www.youtube.com/watch?v=Eak9JO1zO2U
