@@ -103,7 +103,13 @@ Cet exercice est décomposé en 4 parties. Le but est de créer 4 formats de bas
 ### Exercice 1 :
 
 ```
-  >
+  > user_1 = User.creat(name: 'Monique')
+
+  > post_1 = Post.new(title: 'La PLS en 8 étapes', body: 'Regarde sur Slack', description: 'Position Latérale de Sécurité', user_id: '1')
+
+  > category_1 = Category.new(name: 'Medical', post_id: '1')
+
+  > category_2 = Category.new(name: 'Development', post_id: '1')
 ```
 
 ### Exercice 2 :
